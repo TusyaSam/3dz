@@ -3,18 +3,18 @@
 # которая найдёт сумму элементов списка, стоящих на нечётной позиции.
 # Пример:
 # - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
-import random
-def summa_nechet_elem_spiska(def_list):
-    sum=0
-    for i in range(len(def_list)):
-        if i %2!=0:
-            sum+= def_list[i]
-    return sum
+# import random
+# def summa_nechet_elem_spiska(def_list):
+#     sum=0
+#     for i in range(len(def_list)):
+#         if i %2!=0:
+#             sum+= def_list[i]
+#     return sum
 
-lenght_list=10
-my_list=[random.randint(0,10) for i in range(lenght_list)]
-my_odd_list=[my_list[i] for i in range(lenght_list) if i%2!=0]
-print(f'{my_list} элементы нечетных позиций {my_odd_list}, ответ {summa_nechet_elem_spiska(my_list)}')
+# lenght_list=10
+# my_list=[random.randint(0,10) for i in range(lenght_list)]
+# my_odd_list=[my_list[i] for i in range(lenght_list) if i%2!=0]
+# print(f'{my_list} элементы нечетных позиций {my_odd_list}, ответ {summa_nechet_elem_spiska(my_list)}')
 
 
 # 2 Напишите программу, которая найдёт произведение пар
@@ -23,12 +23,34 @@ print(f'{my_list} элементы нечетных позиций {my_odd_list}
 # - [2, 3, 4, 5, 6] => [12, 15, 16];
 # - [2, 3, 5, 6] => [12, 15]
 
+# def proz_par_elem_spiska(array: list[int])->list[int]:
+#     spisok=[]
+#     for i in range(int(len(array)//2+len(array)%2)):  #for i in range(ceil(len(array)/2)):
+#         spisok.append(array[i]*array[-(i+1)])
+#     return spisok
+
+# print(proz_par_elem_spiska([2,3,4,5,6]))
+# print(proz_par_elem_spiska([2,3,5,6]))
+
+# метод ceil округляет вверх
 
 # 3 Задайте список из вещественных чисел. Напишите программу, 
 # которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
 # *Пример:*
 # - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
+# import random
+# import math
+
+# lenght_list=5
+# my_list = [1.1, 1.2, 3.1, 5, 10.01]
+# my_tail_list=[round(my_list[i]-int(my_list[i]),2) for i in range(lenght_list)]
+# my_shorttail_list=[]
+# for i in range(lenght_list):
+#     if my_tail_list[i]:
+#         my_shorttail_list.append(my_tail_list[i])
+
+# print(f"{my_list}-> {my_shorttail_list}-> {max(my_shorttail_list)-min(my_shorttail_list)}")
 
 # 4 Напишите программу, которая будет 
 # преобразовывать десятичное число в двоичное.
