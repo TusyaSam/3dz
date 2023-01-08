@@ -3,6 +3,19 @@
 # которая найдёт сумму элементов списка, стоящих на нечётной позиции.
 # Пример:
 # - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
+import random
+def summa_nechet_elem_spiska(def_list):
+    sum=0
+    for i in range(len(def_list)):
+        if i %2!=0:
+            sum+= def_list[i]
+    return sum
+
+lenght_list=10
+my_list=[random.randint(0,10) for i in range(lenght_list)]
+my_odd_list=[my_list[i] for i in range(lenght_list) if i%2!=0]
+print(f'{my_list} элементы нечетных позиций {my_odd_list}, ответ {summa_nechet_elem_spiska(my_list)}')
+
 
 
 # 2 Напишите программу, которая найдёт произведение пар
